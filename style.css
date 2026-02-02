@@ -8,9 +8,9 @@
 /* Body styling */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: rgba(33, 114, 37, 0.678); /* soft green tint */
-  padding-top: 0; /* or keep 60px if your navbar is not fixed */
-  color: #fff; /* optional: make default text white if needed */
+  background-color: rgba(33, 114, 37, 0.678);
+  padding-top: 0;
+  color: #fff;
 }
 
 /* Navbar styling */
@@ -24,7 +24,6 @@ body {
   z-index: 1000;
   backdrop-filter: saturate(180%) blur(8px);
 }
-
 
 /* Container to center content */
 .navbar-container {
@@ -42,7 +41,7 @@ body {
   color: white;
   font-size: 1.8rem;
   font-weight: bold;
-  text-decoration: non
+  text-decoration: none;
 }
 
 /* Navigation links styling */
@@ -64,12 +63,12 @@ body {
   color: #ff6347;
 }
 
-/* Hero section with background image */
+/* Hero section */
 .hero-section {
   background-image: url('TG.jpeg');
   background-size: cover;
   background-position: center;
-  height: 100vh; /* or 600px if you prefer */
+  height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -78,12 +77,10 @@ body {
   text-align: center;
 }
 
-
-/* Optional overlay for readability */
 .hero-section::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  inset: 0;
   background: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
@@ -91,53 +88,42 @@ body {
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: 15px 2px 0; /* moved up by 5px */
-  
+  padding: 15px 2px 0;
 }
 
-/* Apply font explicitly to both */
 .hero-content h1 {
   font-size: 2.4rem;
   font-weight: 700;
   font-family: 'Epunda Slab', serif;
 }
 
-
 .hero-content p {
   font-size: 1.3rem;
-  font-weight: 400;
   margin-top: 10px;
   font-family: 'Epunda Slab', serif;
 }
 
-
-/*ABOUT PAGE CODE BEGINS FROM HERE*/
-
-/* About page layout */
+/* ABOUT PAGE */
 .about-section {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   min-height: 100vh;
   background-color: white;
-  padding: 100px 20px 40px; /* account for navbar height */
+  padding: 100px 20px 40px;
   font-family: 'Epunda Slab', serif;
   color: #303030;
 }
 
 .about-text {
-  max-width: 600px;              /* Increased from 450px */
+  max-width: 600px;
   background-color: #f8f8f8;
-  padding: 35px 40px;            /* Increased padding */
+  padding: 35px 40px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
   border-left: 5px solid rgba(154, 194, 44, 0.8);
-  font-family: 'Epunda Slab', serif;
-  color: #303030;
-  font-size: 1.05rem;            /* Optional: slightly larger font */
-  line-height: 1.6;              /* Optional: improves readability */
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
-/* Positioning */
 .top-right {
   align-self: flex-end;
   text-align: right;
@@ -149,44 +135,24 @@ body {
   text-align: left;
 }
 
-/* WhatsApp floating button */
-.whatsapp-float {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background-color: #25d366;
-  color: white;
-  border-radius: 50%;
-  padding: 15px;
-  font-size: 28px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-  z-index: 10000;
-  transition: background-color 0.3s;
-  text-decoration: none;
-}
-
-.whatsapp-float:hover {
-  background-color: #128c4a;
-}
-
-/*LOGO IMAGE CSS*/
+/* LOGO IMAGE */
 .logo-img {
-  height: 50px; /* Adjust based on your desired size */
+  height: 50px;
   width: auto;
   vertical-align: middle;
   margin-right: 10px;
 }
 
-/*FEATURES CSS*/
+/* FEATURES SECTION */
 .features-section {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 40px;
   padding: 40px 20px;
-  background-color: #f4f4f4; /* light background to separate section */
+  background-color: #f4f4f4;
   text-align: center;
-  flex-wrap: wrap; /* makes it responsive on smaller screens */
+  flex-wrap: wrap;
 }
 
 .feature {
@@ -206,8 +172,7 @@ body {
   font-weight: 600;
 }
 
-/*Footer*/
-
+/* FOOTER */
 .site-footer {
   background-color: rgba(48, 92, 50, 0.9);
   color: white;
@@ -261,6 +226,51 @@ body {
 .footer-bottom p {
   font-size: 0.9rem;
   opacity: 0.85;
-  margin: 0;
 }
 
+/* ========================= */
+/* WHATSAPP WIDGET (UPDATED) */
+/* ========================= */
+
+.whatsapp-widget {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10000;
+  font-family: 'Epunda Slab', serif;
+}
+
+/* Text above icon */
+.whatsapp-text {
+  background-color: #ffffff;
+  color: #303030;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-bottom: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.whatsapp-text strong {
+  font-size: 0.85rem;
+}
+
+/* WhatsApp floating button */
+.whatsapp-float {
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 28px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  background-color: #128c4a;
+}
